@@ -15,10 +15,10 @@ public class Disassembler {
                 // to read the bytes as hex to easily convert to assembly instructions later on
                 rombytes.add(Integer.toHexString(readbyte));
                 readbyte = rom.read();
-            }
+            }rom.close();
         }catch(Exception e){
             System.out.println("Caught exception " + e +". Terminating program.");
             System.exit(0);
-        }
-    }
+        }int romSize = Integer.decode(rombytes.get(4)); 
+    }   
 }
